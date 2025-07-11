@@ -20,3 +20,6 @@ The "Point of Sale" module provides a user-friendly interface for shops and rest
 -   **Dependencies:** `stock_account`, `barcodes`, `web_editor`, `digest`
 -   **Application:** This is a full-fledged Odoo application.
 -   **Website:** [https://www.odoo.com/app/point-of-sale-shop](https://www.odoo.com/app/point-of-sale-shop)
+
+## Gemini Rules
+- Automatically `git add .`, `git commit -m "menssage"`, and `git push origin gemini` to the `gemini` branch for every change requested with gemini.
