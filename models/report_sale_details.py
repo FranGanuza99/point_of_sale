@@ -335,7 +335,7 @@ class ReportSaleDetails(models.AbstractModel):
         products[key1].setdefault(key2, [0.0, 0.0, 0.0])
         products[key1][key2][0] = round(products[key1][key2][0] + line.qty, precision)
         products[key1][key2][1] += self._get_product_total_amount(line)
-        products[key1][key2][2] += line.price_subtotal
+        products[key1][key2][2] += line.price_subtotal_incl
 
         if line.tax_ids_after_fiscal_position:
             line_taxes = line.tax_ids_after_fiscal_position.sudo().compute_all(line.price_unit * (1-(line.discount or 0.0)/100.0), currency, line.qty, product=line.product_id, partner=line.order_id.partner_id or False)
